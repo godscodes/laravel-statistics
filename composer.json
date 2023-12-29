@@ -1,0 +1,83 @@
+{
+    "name": "godscodes/laravel-statistics",
+    "description": "Statistics is a lightweight, yet detailed package for tracking and recording user visits across your Laravel application. With only one simple query per request, important data is being stored, and later a cronjob crush numbers to extract meaningful stories from within the haystack.",
+    "type": "library",
+    "keywords": [
+        "user",
+        "model",
+        "rinvex",
+        "laravel",
+        "eloquent",
+        "statistics",
+        "tracking",
+        "visitor",
+        "agents",
+        "client",
+        "views",
+        "device",
+        "logging",
+        "platform",
+        "browser"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/godscodes/laravel-statistics",
+    "support": {
+        "docs": "https://github.com/godscodes/laravel-statistics"
+    },
+    "authors": [
+        {
+            "name": "Godscodes",
+            "homepage": "https://github.com/godscodes",
+            "role": "owner"
+        }
+    ],
+    "require": {
+        "geoip2/geoip2": "^2.12.0|^3.0.0",
+        "illuminate/bus": "^9.0.0 || ^10.0.0",
+        "illuminate/console": "^9.0.0 || ^10.0.0",
+        "illuminate/contracts": "^9.0.0 || ^10.0.0",
+        "illuminate/database": "^9.0.0 || ^10.0.0",
+        "illuminate/http": "^9.0.0 || ^10.0.0",
+        "illuminate/queue": "^9.0.0 || ^10.0.0",
+        "illuminate/routing": "^9.0.0 || ^10.0.0",
+        "illuminate/support": "^9.0.0 || ^10.0.0",
+        "jenssegers/agent": "^2.6.0",
+        "rinvex/countries": "^8.0.0|^9.0.0",
+        "rinvex/laravel-support": "^6.0.0|^7.0.0",
+        "symfony/http-foundation": "^6.0.0|^7.0.0",
+        "torann/geoip": "^3.0.0",
+        "ua-parser/uap-php": "^3.9.0"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.31.0",
+        "illuminate/container": "^9.0.0 || ^10.0.0",
+        "phpunit/phpunit": "^9.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rinvex\\Statistics\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rinvex\\Statistics\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rinvex\\Statistics\\Providers\\StatisticsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
