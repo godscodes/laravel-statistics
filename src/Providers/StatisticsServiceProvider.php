@@ -83,7 +83,7 @@ class StatisticsServiceProvider extends ServiceProvider
             __DIR__.'/../../config/config.php' => config_path('rinvex.statistics.php'),
         ], 'rinvex/statistics::config');
         $this->publishes([
-            __DIR__.'/../../database/migrations/rinvex/statistics/' => database_path('migrations')
+            __DIR__.'/../../database/migrations/' => database_path('migrations/rinvex/laravel-statistics')
         ], 'rinvex/statistics::migrations');
         if (! $this->app->runningInConsole()) {
             $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
